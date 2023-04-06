@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+     <head>
+        <title>Editor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link href="buy.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+      
+                <div class="banner">
+                    <h2> Buy Premium </h2>
+                    <form action="buy.html" method="post">
+
+                        <fieldset>   
+                            <legend>Personal Information</legend>
+
+                            <label for="uname">Name<span>*</span></label>
+                            <input name="name" id="uname"   placeholder="Entername" required/> </br>
+
+                            <label>Address<span>*</span></label>
+                            <textarea rows="8" cols="50" placeholder="enter address" required></textarea></br>
+                            <label> E-mail<span>*</span></label>
+                            <input   type="text" name="pword" id="E-mail" required></br>
+                            <label> Phone Number<span>*</span></label>
+                            <input  type="text" name="phone" id="Phonenumber" required></br>
+                        </fieldset>
+                        <fieldset>   
+                            <legend>Payment options</legend>
+
+                            <label for="paymentmethod"> Payment Method <span>*</span> </label>
+                            <input type="radio" name="method" value="Master card" id="M"/><label for="M">Master Card</label>
+                            <input type="radio" name="method" value="Visa card" id="V"/><label for="V">Visa Card</label>
+                            <input type="radio" name="method" value="Discover card" id="D"/><label for="D">Discover Card</label> </br>
+
+                            <label> Card Number <span>*</span></label>
+                            <input type="text" name="number" id="cardnumber"></br>
+
+                            <label> CVV<span>*</span></label>
+                            <input  type="text" name="CVV" id="CVV"></br>
+
+                            <label> Name on Card<span>*</span></label>
+                            <input  type="text" name="name" id="Name"></br>
+                        </fieldset>  
+                        <div>
+                            <div class="container">
+                                <form name="myForm"  onsubmit=" return check()" action="validationformhtml.html" method="get">   </form>
+                                <input type="submit" value="Submit form"  class="submitbtn"/> 
+                                <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    </body>
+</html>

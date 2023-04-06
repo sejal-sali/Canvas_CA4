@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Editor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="filter.css" rel="stylesheet" type="text/css"/>
+        <script src="filter.js" type="text/javascript"></script>
+        <script src="draw.js" type="text/javascript"></script>
+         <script src="https://kit.fontawesome.com/2c6cbf00fb.js" crossorigin="anonymous"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+         <script> src="https://rawcdn.githack.com/kousik19/foto.js/045defe1a5ce06220e084e4e6f6fbaccb7621841/foto.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="container-menu">
+        
+        <nav>
+            <ul>
+                <li><a  href="index.html"> Home</a></li>
+                <li><a  href="">Tools</a></li>
+                <li><a  href="">Create</a></li>
+                <li><a  href="buy.html">Get Premium </a><li>
+            </ul>   
+        </nav>
+            </div>
+
+       
+            <div class="container-icons">
+               <!-- <i class="fi fi-rr-pencil"></i>-->
+                <button><i><a class="fa-solid fa-pencil" href="scribble.html"><br><br>Draw</a></i></button>
+                
+                <button> <i class="fa-solid fa-sliders" onclick=""><br><br>Filter</i></button>
+                <button> <i ><a class="fa-solid fa-vector-square" href="template.html" ><br><br>Templates</a></i></button>
+                <button><i class="fa-solid fa-crop-simple" onclick="crop()"><br><br>Crop</i></button>
+                
+               
+            </div>   
+            
+            <!--
+            <div class="file-container">
+            <input type="file" id="file"/>
+            </div>
+            <div id="container-canvas">
+            <img id = "originalImage" /> 
+            <canvas id="canvas"></canvas>
+            </div>
+             -->
+            
+            
+            <div class ="container-editor"> 
+                <div>
+                    <br/>
+               <div class="container-canvas">
+            <img id = 'originalImage' src =  'images/img3.jpg'>   
+            <canvas id = 'canvas'></canvas>
+            </div>
+           
+               
+                    <br/>
+                    <div class="container-button-filter">
+                    
+                   </div>    
+                    <br/>
+            </div>
+            </div>
+                <div class="container-downloadButton">
+                    
+                    <button class="filter-btn" value="modify" onclick="brightness()">Brightness</button> <br/>
+                             <button class="filter-btn" value="modifyGreyscale" onclick="greyscale()">Grayscale</button> <br/>
+          <button class="filter-btn" value="modifySepia " onclick="sepia()">Sepia</button> <br/>
+            <button class="filter-btn" value="modifyInvert" onclick="invert()">Invert</button> <br/>
+           <button class="filter-btn" value ="modifyPosterise" onclick="posterise()">Posterise</button> <br/>
+           <button class="filter-btn" value="modifyNegative" onclick="negative()">Negative</button> <br/>
+          <button class="filter-btn" value="modifyThreshold" onclick = "threshold()">Threshold</button> <br/>
+            <button class="filter-btn" value="modifyoffscreen" onclick = "renderCanvas()">Offscreen</button> <br/>
+            <button class="filter-btn" value="modifycomposites" onclick = "renderCanvas1()">Global Composite</button> <br/>
+           <button class="filter-btn" value="modifycomposites" onclick = "renderCanvas2()">Image Convolution</button> <br/>
+            <button class="filter-btn" value="modifycomposites" onclick = "renderCanvas3()">Frames</button> <br/>
+            <button class="filter-btn" value="modifycomposites" onclick = "renderCanvas4()">Texts</button> <br/>
+           
+            <label for="rotation">Rotate: </label>
+                        <input type="range" id="rotation" name="rotation" value="0" min="0" max="360" onclick="setRotationDegrees(this.value)">
+             <!--     <tr><td><button class="filter-btn" value="modifycomposites" onclick = "rotate()">Rotate</button></td></tr>-->
+            <a class="btn" download="image.png" onclick="this.href = canvas.toDataURL('image/png')"><div id="textDownload">DOWNLOAD</div></a>
+                </div>
+    <footer class="container-footer">
+     <p> ©Copyright 2022    ASKs </p> 
+    </footer>
+    </div>
+  </body>
+</html>
+
+    
+         
